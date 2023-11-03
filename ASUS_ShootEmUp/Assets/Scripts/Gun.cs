@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class shoot : MonoBehaviour
+public class Gun : MonoBehaviour
 {
     public Bullets bullet;
     // Start is called before the first frame update
@@ -20,5 +20,6 @@ public class shoot : MonoBehaviour
     public void Shoot()
     {
         GameObject go = Instantiate(bullet.gameObject, transform.position, Quaternion.identity);
+        Debug.Log(transform.position);
     }
 }

@@ -16,6 +16,7 @@ public class ship_movement : MonoBehaviour
     void Start()
     {
         guns = transform.GetComponentsInChildren<Gun>();
+        Debug.Log(guns);
     }
 
 
@@ -23,6 +24,19 @@ public class ship_movement : MonoBehaviour
     void Update()
     {
         ProcessInputs();
+
+        shoot = Input.GetKeyDown(KeyCode.Space);
+        
+        if (shoot)
+        {
+            shoot = false;
+            foreach(Gun gun in guns)
+            {
+                gun.Shoot();
+            }
+            Debug.Log("Shoot!");
+        }
+        
     }
 
     void FixedUpdate()
