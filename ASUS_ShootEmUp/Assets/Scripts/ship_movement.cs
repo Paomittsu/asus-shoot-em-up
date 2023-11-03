@@ -4,10 +4,21 @@ using UnityEngine;
 
 public class ship_movement : MonoBehaviour
 {
+    Gun[] guns;
+
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
 
     private Vector2 moveDirection;
+
+    bool shoot;
+
+    void Start()
+    {
+        guns = transform.GetComponentsInChildren<Gun>();
+    }
+
+
     // Update is called once per frame
     void Update()
     {
