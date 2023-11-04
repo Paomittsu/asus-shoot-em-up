@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveSin : MonoBehaviour
 {
     float sinCenterY;
-    public float amplitude = 4;
+    public float amplitude = 2;
     public float frequency = 0.5f;
 
     // Start is called before the first frame update

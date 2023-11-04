@@ -11,7 +11,8 @@ public class ship_movement : MonoBehaviour
 
     private Vector2 moveDirection;
 
-    bool shoot;
+    bool shoot1;
+    bool shoot2;
 
     void Start()
     {
@@ -25,11 +26,13 @@ public class ship_movement : MonoBehaviour
     {
         ProcessInputs();
 
-        shoot = Input.GetKeyDown(KeyCode.Space);
+        shoot1 = Input.GetKeyDown(KeyCode.Space);
+        shoot2 = Input.GetKeyDown(KeyCode.Mouse0);
         
-        if (shoot)
+        if (shoot1 || shoot2)
         {
-            shoot = false;
+            shoot1 = false;
+            shoot2 = false;
             foreach(Gun gun in guns)
             {
                 gun.Shoot();
