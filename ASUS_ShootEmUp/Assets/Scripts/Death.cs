@@ -31,10 +31,12 @@ public class Death : MonoBehaviour
 
     public void Winner()
     {
+        deathscrn.SetActive(false);
         winscrn.SetActive(true);
-        // Time.timeScale = 0;
         StartCoroutine(PlayerWin());
     }
+
+    
 
     IEnumerator PlayerLose()
     {
