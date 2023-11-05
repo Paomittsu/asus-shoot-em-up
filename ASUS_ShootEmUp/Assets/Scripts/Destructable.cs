@@ -59,18 +59,13 @@ public class Destructable : MonoBehaviour
                     Instantiate(explosion, transform.position, Quaternion.identity);
                 }
                 
-                StartCoroutine(DestroyDestructable(bullet.gameObject));
+                //StartCoroutine(DestroyDestructable(bullet.gameObject));
+                
                 boomSFX.Play();
+                Destroy(gameObject, 1f);
                 Destroy(bullet.gameObject);
 
             }
         }
-    }
-
-    IEnumerator DestroyDestructable (GameObject bullet)
-    {
-        yield return new WaitForSeconds(1.0f);
-
-        Destroy(gameObject);
     }
 }
