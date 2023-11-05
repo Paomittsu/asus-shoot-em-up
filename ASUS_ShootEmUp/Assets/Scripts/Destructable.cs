@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Destructable : MonoBehaviour
 {
+    public GameObject explosion;
+
     bool canBeDestroyed = false;
 
     // Start is called before the first frame update
@@ -15,9 +17,14 @@ public class Destructable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x < 17f)
+        if (transform.position.x < 17f && !canBeDestroyed)
         {
             canBeDestroyed = true;
+            Gun[] guns = transform.GetComponentsInChildren<Gun>();
+            foreach (Gun gun in guns)
+            {
+                gun.isActive = true;
+            }
         }
     }
 
@@ -32,9 +39,36 @@ public class Destructable : MonoBehaviour
         {
             if (!bullet.isEnemy)
             {
-                Destroy(gameObject);
+                MoveRightLeft movespeed = GetComponent<MoveRightLeft>();
+                if (movespeed != null)
+                {
+                    movespeed.moveSpeeed = 0f;
+                }
+                GetComponent<SpriteRenderer>().enabled = false;
+
+                BoxCollider2D boxCollider = GetComponent<BoxCollider2D>();
+                if (boxCollider != null)
+                {
+                    boxCollider.isTrigger = false;
+                }
+
+                if (explosion != null)
+                {
+                    Instantiate(explosion, transform.position, Quaternion.identity);
+                }
+                
+                StartCoroutine(DestroyDestructable(bullet.gameObject));
                 Destroy(bullet.gameObject);
+                Destroy(explosion.gameObject);
+
             }
         }
+    }
+
+    IEnumerator DestroyDestructable (GameObject bullet)
+    {
+        yield return new WaitForSeconds(1.0f);
+
+        Destroy(gameObject);
     }
 }

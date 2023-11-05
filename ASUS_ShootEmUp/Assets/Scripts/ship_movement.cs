@@ -17,6 +17,10 @@ public class ship_movement : MonoBehaviour
     void Start()
     {
         guns = transform.GetComponentsInChildren<Gun>();
+        foreach(Gun gun in guns)
+        {
+            gun.isActive = true;
+        }
     }
 
 

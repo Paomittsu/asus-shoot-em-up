@@ -12,6 +12,9 @@ public class Gun : MonoBehaviour
     public float shootDelaySeconds = 0.0f;
     public float shootTimer = 0f;
     public float delayTimer = 0f;
+
+    public bool isActive = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +24,11 @@ public class Gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!isActive)
+        {
+            return;
+        }
+
         direction = (transform.localRotation * Vector2.right).normalized;
 
         if (autoShoot)
