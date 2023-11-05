@@ -9,8 +9,6 @@ public class EnemySpawner : MonoBehaviour
 
     [SerializeField] private GameObject[] enemyPrefabs;
 
-    [SerializeField] private bool canSpawn = true;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +26,6 @@ public class EnemySpawner : MonoBehaviour
         WaitForSeconds wait = new WaitForSeconds(spawnRate);
         yield return wait;  
         Instantiate(enemyPrefabs[0], transform.position, Quaternion.identity);
-        Debug.Log(transform.position);
         
     }
 }

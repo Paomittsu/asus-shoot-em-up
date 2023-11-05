@@ -28,11 +28,8 @@ public class MoveRightLeft : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        
 
-        if (parentObject.transform.childCount == 1)
-        {
-            Destroy(parentObject);
-        }
 
         transform.position = pos;
     }

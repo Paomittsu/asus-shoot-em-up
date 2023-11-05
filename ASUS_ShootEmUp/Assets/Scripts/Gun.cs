@@ -49,6 +49,5 @@ public class Gun : MonoBehaviour
         GameObject go = Instantiate(bullet.gameObject, transform.position, Quaternion.identity);
         Bullets goBullet = go.GetComponent<Bullets>();
         goBullet.direction = direction;
-        Debug.Log(transform.position);
     }
 }
