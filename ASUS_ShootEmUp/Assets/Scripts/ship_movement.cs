@@ -53,13 +53,13 @@ public class ship_movement : MonoBehaviour
                 gun.Shoot();
             }
         }
-        if(transform.position.y >= 9.50f)
+        if(transform.position.y >= 8.849f)
         {
-            transform.position = new Vector3(transform.position.x, 9.50f,0);
+            transform.position = new Vector3(transform.position.x, 8.849f,0);
         }
-        else if(transform.position.y <= 0.54f)
+        else if(transform.position.y <= 1.866f)
         {
-            transform.position = new Vector3(transform.position.x, 0.54f,0);
+            transform.position = new Vector3(transform.position.x, 1.866f,0);
         }
 
         if(transform.position.x <= 0.75f)
