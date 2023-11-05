@@ -642,6 +642,7 @@ GameObject:
   - component: {fileID: 864521869}
   - component: {fileID: 864521868}
   - component: {fileID: 864521871}
+  - component: {fileID: 864521872}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Untagged
@@ -666,6 +667,7 @@ MonoBehaviour:
   health: {fileID: 1856173151}
   maxHealth: 5
   currentHealth: 0
+  animator: {fileID: 864521872}
   explosion: {fileID: 2934354480380895894, guid: 6ed8fc6a8ecddc343ba30b9699f18a49, type: 3}
   explosionSmol: {fileID: 2934354480380895894, guid: 77ef25efee5464f47a403ef7c9db2965, type: 3}
 --- !u!50 &864521869
@@ -777,6 +779,27 @@ PolygonCollider2D:
       - {x: 0.48441654, y: -0.019753516}
       - {x: 0.293522, y: 0.09405412}
   m_UseDelaunayMesh: 0
+--- !u!95 &864521872
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864521867}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2f1a574db770237448c0de663dd87ea4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1059139686
 GameObject:
   m_ObjectHideFlags: 0

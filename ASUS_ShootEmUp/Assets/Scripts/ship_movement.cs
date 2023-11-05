@@ -11,6 +11,7 @@ public class ship_movement : MonoBehaviour
     public Health health;
     public int maxHealth = 5;
     public int currentHealth;
+    public Animator animator;
 
     public GameObject explosion;
     public GameObject explosionSmol;
@@ -119,6 +120,7 @@ public class ship_movement : MonoBehaviour
         }
 
         isInvulnerable = true;
+        animator.SetBool("damage", true);
         Invoke("ResetVulnerability", invulnerabilityTime);
         if (currentHealth <= 0)
         {
@@ -134,5 +136,6 @@ public class ship_movement : MonoBehaviour
     private void ResetVulnerability()
     {
         isInvulnerable = false;
+        animator.SetBool("damage", false);
     }
 }
