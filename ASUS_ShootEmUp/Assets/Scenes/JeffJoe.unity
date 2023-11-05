@@ -707,7 +707,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   rb: {fileID: 864521869}
-  health: {fileID: 0}
+  health: {fileID: 1856173151}
   maxHealth: 5
   currentHealth: 0
 --- !u!50 &864521869
@@ -1808,6 +1808,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1851094230}
   m_CullTransparentMesh: 1
+--- !u!114 &1856173151 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 562194460278878064, guid: be9c75d1181b25a4ebcace43fd13bc38, type: 3}
+  m_PrefabInstance: {fileID: 1466693665}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b01c4c6b529d34696edfedd70eb5b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4411528731000302269
 PrefabInstance:
   m_ObjectHideFlags: 0
