@@ -176,6 +176,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 2934354480380895894, guid: 6ed8fc6a8ecddc343ba30b9699f18a49, type: 3}
+  explosionSmol: {fileID: 0}
+  maxHealth: 4
+  currentHealth: 0
   boomSFX: {fileID: 486353518116337800}
 --- !u!114 &1493659918561070976
 MonoBehaviour:
