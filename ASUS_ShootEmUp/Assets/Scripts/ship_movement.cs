@@ -17,7 +17,6 @@ public class ship_movement : MonoBehaviour
     void Start()
     {
         guns = transform.GetComponentsInChildren<Gun>();
-        Debug.Log(guns);
     }
 
 
@@ -37,7 +36,6 @@ public class ship_movement : MonoBehaviour
             {
                 gun.Shoot();
             }
-            Debug.Log("Shoot!");
         }
         
     }
