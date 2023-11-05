@@ -31,7 +31,7 @@ public class Death : MonoBehaviour
 
     public void Winner()
     {
-        winscrn.SetActive(false);
+        winscrn.SetActive(true);
         // Time.timeScale = 0;
         StartCoroutine(PlayerWin());
     }
@@ -44,7 +44,7 @@ public class Death : MonoBehaviour
 
     IEnumerator PlayerWin()
     {
-        winFade.SetTrigger("Live");
+        deathFade.SetTrigger("Live");
         yield return new WaitForSeconds(deathTime);
     }
 
