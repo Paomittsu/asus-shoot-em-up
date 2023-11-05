@@ -12,6 +12,9 @@ public class ship_movement : MonoBehaviour
     public int maxHealth = 5;
     public int currentHealth;
 
+    public GameObject explosion;
+    public GameObject explosionSmol;
+
     private Vector2 moveDirection;
     private bool isInvulnerable = false;
     private float invulnerabilityTime = 2f;
@@ -109,12 +112,20 @@ public class ship_movement : MonoBehaviour
         }
 
         currentHealth -= 1;
-        health.SetHealth(currentHealth); 
+        health.SetHealth(currentHealth);
+        if (explosionSmol != null)
+        {
+            Instantiate(explosionSmol, transform.position, Quaternion.identity);
+        }
 
         isInvulnerable = true;
         Invoke("ResetVulnerability", invulnerabilityTime);
         if (currentHealth <= 0)
         {
+            if (explosion != null)
+            {
+                Instantiate(explosion, transform.position, Quaternion.identity);
+            }
             Destroy(gameObject);
             Destroy(bullet.gameObject);
         }

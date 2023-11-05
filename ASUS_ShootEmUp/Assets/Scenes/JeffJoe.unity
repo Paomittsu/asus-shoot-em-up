@@ -666,6 +666,8 @@ MonoBehaviour:
   health: {fileID: 1856173151}
   maxHealth: 5
   currentHealth: 0
+  explosion: {fileID: 2934354480380895894, guid: 6ed8fc6a8ecddc343ba30b9699f18a49, type: 3}
+  explosionSmol: {fileID: 2934354480380895894, guid: 77ef25efee5464f47a403ef7c9db2965, type: 3}
 --- !u!50 &864521869
 Rigidbody2D:
   serializedVersion: 4
