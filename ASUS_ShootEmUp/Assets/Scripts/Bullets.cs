@@ -32,4 +32,18 @@ public class Bullets : MonoBehaviour
 
         transform.position = pos;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Player") && isEnemy)
+        {
+            Destroy(gameObject, 0.1f);
+        }
+
+        if(!collision.CompareTag("Player") && !isEnemy)
+        {
+
+            Destroy(gameObject, 0.05f);
+        }
+    }
 }

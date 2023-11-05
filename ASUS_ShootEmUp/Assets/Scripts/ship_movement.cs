@@ -101,6 +101,8 @@ public class ship_movement : MonoBehaviour
         Destructable destructable = collision.GetComponent<Destructable>();
         if (destructable != null)
         {
+            PolygonCollider2D collider = GetComponent<PolygonCollider2D>();
+            collider.enabled = false;
             TakeDamage(null);
         }
     }
@@ -109,6 +111,8 @@ public class ship_movement : MonoBehaviour
     {
         if (isInvulnerable)
         {
+            PolygonCollider2D collider = GetComponent<PolygonCollider2D>();
+            collider.enabled = false;
             return;
         }
 
@@ -136,6 +140,8 @@ public class ship_movement : MonoBehaviour
     private void ResetVulnerability()
     {
         isInvulnerable = false;
+        PolygonCollider2D collider = GetComponent<PolygonCollider2D>();
+        collider.enabled = true;
         animator.SetBool("damage", false);
     }
 }
