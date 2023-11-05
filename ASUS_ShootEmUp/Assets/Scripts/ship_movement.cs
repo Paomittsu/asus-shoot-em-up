@@ -101,6 +101,8 @@ public class ship_movement : MonoBehaviour
         Destructable destructable = collision.GetComponent<Destructable>();
         if (destructable != null)
         {
+            PolygonCollider2D collider = GetComponent<PolygonCollider2D>();
+            collider.enabled = false;
             TakeDamage(null);
         }
     }
