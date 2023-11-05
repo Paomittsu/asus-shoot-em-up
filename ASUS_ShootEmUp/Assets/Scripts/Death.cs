@@ -32,7 +32,7 @@ public class Death : MonoBehaviour
     public void Winner()
     {
         winscrn.SetActive(false);
-        Time.timeScale = 0;
+        // Time.timeScale = 0;
         StartCoroutine(PlayerWin());
     }
 

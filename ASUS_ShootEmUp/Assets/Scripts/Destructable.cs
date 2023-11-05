@@ -12,6 +12,8 @@ public class Destructable : MonoBehaviour
 
     bool canBeDestroyed = false;
 
+    public Death death;
+
     [SerializeField] private AudioSource boomSFX;
     // Start is called before the first frame update
     void Start()
@@ -89,10 +91,19 @@ public class Destructable : MonoBehaviour
                     boxCollider.isTrigger = false;
                     boxCollider.enabled = false;
                 }
+
+                if(gameObject.CompareTag("Boss"))
+                {
+                    death.Winner();
+
+
+                }
                 Instantiate(explosion, transform.position, Quaternion.identity);
                 boomSFX.Play();
+
+                
+
                 Destroy(gameObject, 1f);
-                // Destroy(bullet.gameObject);
             }
         }
     }

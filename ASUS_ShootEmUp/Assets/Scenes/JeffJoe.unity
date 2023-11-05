@@ -1224,7 +1224,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1172708507
 Transform:
   m_ObjectHideFlags: 0
@@ -1942,11 +1942,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8321474241760548987, guid: f4d0e4c10a6d80d43906611f0b792a63, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8321474241760548987, guid: f4d0e4c10a6d80d43906611f0b792a63, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2263,6 +2263,7 @@ MonoBehaviour:
   explosionSmol: {fileID: 2934354480380895894, guid: 77ef25efee5464f47a403ef7c9db2965, type: 3}
   maxHealth: 4
   currentHealth: 0
+  death: {fileID: 1323764185566658616}
   boomSFX: {fileID: 5137265871659058835}
 --- !u!114 &6146965084217176475
 MonoBehaviour:
