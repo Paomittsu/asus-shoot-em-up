@@ -151,6 +151,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 2934354480380895894, guid: 6ed8fc6a8ecddc343ba30b9699f18a49, type: 3}
+  explosionSmol: {fileID: 0}
+  maxHealth: 2
+  currentHealth: 0
   boomSFX: {fileID: -6355972026533749245}
 --- !u!212 &1899626381166157297
 SpriteRenderer:

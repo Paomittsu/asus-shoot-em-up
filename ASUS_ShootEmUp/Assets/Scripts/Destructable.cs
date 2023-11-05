@@ -5,6 +5,10 @@ using UnityEngine;
 public class Destructable : MonoBehaviour
 {
     public GameObject explosion;
+    public GameObject explosionSmol;
+
+    public int maxHealth;
+    public int currentHealth;
 
     bool canBeDestroyed = false;
 
@@ -12,7 +16,7 @@ public class Destructable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -40,30 +44,40 @@ public class Destructable : MonoBehaviour
         {
             if (!bullet.isEnemy)
             {
-                MoveRightLeft movespeed = GetComponent<MoveRightLeft>();
-                if (movespeed != null)
-                {
-                    movespeed.moveSpeeed = 0f;
-                }
-                GetComponent<SpriteRenderer>().enabled = false;
+                currentHealth -= 1;
 
-                BoxCollider2D boxCollider = GetComponent<BoxCollider2D>();
-                if (boxCollider != null)
+                if (explosionSmol != null)
                 {
-                    boxCollider.isTrigger = false;
-                    boxCollider.enabled = false;
+                    Instantiate(explosionSmol, transform.position, Quaternion.identity);
                 }
 
                 if (explosion != null)
                 {
-                    Instantiate(explosion, transform.position, Quaternion.identity);
+                    if (currentHealth == 0)
+                    {
+                        MoveRightLeft movespeed = GetComponent<MoveRightLeft>();
+                        if (movespeed != null)
+                        {
+                            movespeed.moveSpeeed = 0f;
+                        }
+                        GetComponent<SpriteRenderer>().enabled = false;
+
+                        BoxCollider2D boxCollider = GetComponent<BoxCollider2D>();
+                        if (boxCollider != null)
+                        {
+                            boxCollider.isTrigger = false;
+                            boxCollider.enabled = false;
+                        }
+                        Instantiate(explosion, transform.position, Quaternion.identity);
+                        boomSFX.Play();
+                        Destroy(gameObject, 1f);
+                        Destroy(bullet.gameObject);
+                    }
                 }
                 
                 //StartCoroutine(DestroyDestructable(bullet.gameObject));
                 
-                boomSFX.Play();
-                Destroy(gameObject, 1f);
-                Destroy(bullet.gameObject);
+                
 
             }
         }
