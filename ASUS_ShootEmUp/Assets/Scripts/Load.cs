@@ -13,7 +13,7 @@ public class Load : MonoBehaviour
 
     public void loadlevel()
     {
-        AsyncOperation operation = SceneManager.LoadSceneAsync(0);
+        AsyncOperation operation = SceneManager.LoadSceneAsync(1);
     }
     public void debug()
     {

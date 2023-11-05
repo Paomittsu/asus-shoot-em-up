@@ -12,6 +12,7 @@ public class ship_movement : MonoBehaviour
     public int maxHealth = 5;
     public int currentHealth;
     public Animator animator;
+    public Death death;
 
     public GameObject explosion;
     public GameObject explosionSmol;
@@ -25,6 +26,7 @@ public class ship_movement : MonoBehaviour
 
     void Start()
     {
+        death = FindObjectOfType<Death>();
         guns = transform.GetComponentsInChildren<Gun>();
         foreach(Gun gun in guns)
         {
@@ -134,6 +136,7 @@ public class ship_movement : MonoBehaviour
             }
             Destroy(gameObject);
             Destroy(bullet.gameObject);
+            death.GameOver();
         }
     }
 
