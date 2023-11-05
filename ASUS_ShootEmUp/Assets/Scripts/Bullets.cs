@@ -12,10 +12,12 @@ public class Bullets : MonoBehaviour
 
     public bool isEnemy = false;
 
+    public GameObject explosionSmol;
+
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, 2f);
+        Destroy(gameObject, 2.5f);
     }
 
     // Update is called once per frame
@@ -37,12 +39,13 @@ public class Bullets : MonoBehaviour
     {
         if(collision.CompareTag("Player") && isEnemy)
         {
+            Instantiate(explosionSmol, transform.position, Quaternion.identity);
             Destroy(gameObject, 0.1f);
         }
 
         if(!collision.CompareTag("Player") && !isEnemy)
         {
-
+            Instantiate(explosionSmol, transform.position, Quaternion.identity);
             Destroy(gameObject, 0.05f);
         }
     }

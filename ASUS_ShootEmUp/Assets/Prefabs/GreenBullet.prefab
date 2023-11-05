@@ -95,6 +95,7 @@ MonoBehaviour:
   speed: 6
   velocity: {x: 0, y: 0}
   isEnemy: 1
+  explosionSmol: {fileID: 2934354480380895894, guid: 77ef25efee5464f47a403ef7c9db2965, type: 3}
 --- !u!1 &6023805544878612115
 GameObject:
   m_ObjectHideFlags: 0

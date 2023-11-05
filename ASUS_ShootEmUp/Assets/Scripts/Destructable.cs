@@ -33,6 +33,20 @@ public class Destructable : MonoBehaviour
                 gun.isActive = true;
             }
         }
+        if(gameObject.CompareTag("Boss"))
+        {
+            if(transform.position.x <= 13f)
+            {
+                transform.position = new Vector3(13f,transform.position.y , 0);
+                canBeDestroyed = true;
+                Gun[] guns = transform.GetComponentsInChildren<Gun>();
+                foreach (Gun gun in guns)
+                {
+                    gun.isActive = true;
+                }
+            }
+        }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -62,10 +76,10 @@ public class Destructable : MonoBehaviour
             {
                 currentHealth -= 1;
 
-                if (explosionSmol != null)
-                {
-                    Instantiate(explosionSmol, transform.position, Quaternion.identity);
-                }
+                // if (explosionSmol != null)
+                // {
+                //     Instantiate(explosionSmol, transform.position, Quaternion.identity);
+                // }
                 objectDeath();
             }
         }
@@ -83,7 +97,17 @@ public class Destructable : MonoBehaviour
                 {
                     movespeed.moveSpeeed = 0f;
                 }
-                GetComponent<SpriteRenderer>().enabled = false;
+                
+
+                if(gameObject.CompareTag("Boss"))
+                {
+                    Destroy(GetComponent<Transform>().GetChild(0).gameObject);
+                    Instantiate(explosion, transform.position, Quaternion.identity);
+                }
+                else
+                {
+                    GetComponent<SpriteRenderer>().enabled = false;
+                }
 
                 BoxCollider2D boxCollider = GetComponent<BoxCollider2D>();
                 if (boxCollider != null)
@@ -95,9 +119,9 @@ public class Destructable : MonoBehaviour
                 if(gameObject.CompareTag("Boss"))
                 {
                     death.Winner();
-
-
                 }
+
+
                 Instantiate(explosion, transform.position, Quaternion.identity);
                 boomSFX.Play();
 

@@ -140,6 +140,7 @@ MonoBehaviour:
   explosionSmol: {fileID: 2934354480380895894, guid: 77ef25efee5464f47a403ef7c9db2965, type: 3}
   maxHealth: 3
   currentHealth: 0
+  death: {fileID: 0}
   boomSFX: {fileID: 6124207182256244112}
 --- !u!212 &4212536293107470500
 SpriteRenderer:

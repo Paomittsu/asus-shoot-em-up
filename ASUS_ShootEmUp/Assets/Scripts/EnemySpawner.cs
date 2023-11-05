@@ -24,8 +24,10 @@ public class EnemySpawner : MonoBehaviour
     private IEnumerator Spawner()
     {
         WaitForSeconds wait = new WaitForSeconds(spawnRate);
-        yield return wait;  
+        yield return wait;
         Instantiate(enemyPrefabs[0], transform.position, Quaternion.identity);
+    
+        
         
     }
 }
