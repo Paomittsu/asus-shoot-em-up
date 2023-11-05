@@ -581,7 +581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   rb: {fileID: 864521869}
-  health: {fileID: 0}
+  health: {fileID: 341835894}
   maxHealth: 5
   currentHealth: 0
 --- !u!50 &864521869
