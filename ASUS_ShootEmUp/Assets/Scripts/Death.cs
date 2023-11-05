@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Death : MonoBehaviour
 {
@@ -31,13 +32,13 @@ public class Death : MonoBehaviour
         yield return new WaitForSeconds(deathTime);
     }
 
-    private void ResetGame()
+    public void ResetGame()
     {
-
+        AsyncOperation operation = SceneManager.LoadSceneAsync(1);
     }
 
-    private void MainMenu()
+    public void MainMenu()
     {
-
+        AsyncOperation operation = SceneManager.LoadSceneAsync(0);
     }
 }
