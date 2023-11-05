@@ -8,8 +8,13 @@ public class ship_movement : MonoBehaviour
 
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
+    public Health health;
+    public int maxHealth = 5;
+    public int currentHealth;
 
     private Vector2 moveDirection;
+    private bool isInvulnerable = false;
+    private float invulnerabilityTime = 2f;
 
     bool shoot1;
     bool shoot2;
@@ -21,6 +26,9 @@ public class ship_movement : MonoBehaviour
         {
             gun.isActive = true;
         }
+
+        currentHealth = maxHealth;
+        health.setMaxHealth(maxHealth);
     }
 
 
@@ -81,20 +89,39 @@ public class ship_movement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Bullets bullet = collision.GetComponent<Bullets>();
-        if (bullet != null)
+        if (bullet != null && bullet.isEnemy)
         {
-            if (bullet.isEnemy)
-            {
-                Destroy(gameObject);
-                Destroy(bullet.gameObject);
-            }
+            TakeDamage(bullet.gameObject);
         }
 
         Destructable destructable = collision.GetComponent<Destructable>();
         if (destructable != null)
         {
+            TakeDamage(null);
+        }
+    }
+
+    private void TakeDamage(GameObject bullet)
+    {
+        if (isInvulnerable)
+        {
+            return;
+        }
+
+        currentHealth -= 1;
+        health.SetHealth(currentHealth); 
+
+        isInvulnerable = true;
+        Invoke("ResetVulnerability", invulnerabilityTime);
+        if (currentHealth <= 0)
+        {
             Destroy(gameObject);
             Destroy(bullet.gameObject);
         }
+    }
+
+    private void ResetVulnerability()
+    {
+        isInvulnerable = false;
     }
 }
