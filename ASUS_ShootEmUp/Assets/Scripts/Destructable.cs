@@ -62,7 +62,6 @@ public class Destructable : MonoBehaviour
                 StartCoroutine(DestroyDestructable(bullet.gameObject));
                 boomSFX.Play();
                 Destroy(bullet.gameObject);
-                Destroy(explosion.gameObject);
 
             }
         }
