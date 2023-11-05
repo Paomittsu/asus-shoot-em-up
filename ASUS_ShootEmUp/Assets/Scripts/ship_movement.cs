@@ -135,7 +135,6 @@ public class ship_movement : MonoBehaviour
                 Instantiate(explosion, transform.position, Quaternion.identity);
             }
             Destroy(gameObject);
-            Destroy(bullet.gameObject);
             death.GameOver();
         }
     }
