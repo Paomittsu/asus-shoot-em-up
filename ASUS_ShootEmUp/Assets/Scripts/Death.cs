@@ -25,14 +25,29 @@ public class Death : MonoBehaviour
 
     public void GameOver()
     {
-        deathscrn.SetActive(true);
+        if(winscrn.activeSelf)
+        {
+            //
+        }
+        else
+        {
+            deathscrn.SetActive(true);
+        }
         StartCoroutine(PlayerLose());
     }
 
     public void Winner()
     {
-        deathscrn.SetActive(false);
-        winscrn.SetActive(true);
+        if(deathscrn.activeSelf)
+        {
+           //
+        }
+        else
+        {
+            winscrn.SetActive(true);
+        }
+        
+        
         StartCoroutine(PlayerWin());
     }
 
