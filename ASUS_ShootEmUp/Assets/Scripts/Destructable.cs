@@ -8,6 +8,7 @@ public class Destructable : MonoBehaviour
 
     bool canBeDestroyed = false;
 
+    [SerializeField] private AudioSource boomSFX;
     // Start is called before the first frame update
     void Start()
     {
@@ -59,8 +60,8 @@ public class Destructable : MonoBehaviour
                 }
                 
                 StartCoroutine(DestroyDestructable(bullet.gameObject));
+                boomSFX.Play();
                 Destroy(bullet.gameObject);
-                Destroy(explosion.gameObject);
 
             }
         }

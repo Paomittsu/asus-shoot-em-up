@@ -104,6 +104,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyType2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6124207182256244112, guid: 9ab8684a9dd95574abf7de3f35607121, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7972063440445184831, guid: 9ab8684a9dd95574abf7de3f35607121, type: 3}
       propertyPath: parentObject
       value: 
@@ -169,6 +173,10 @@ PrefabInstance:
     - target: {fileID: 5288223886911284194, guid: 9ab8684a9dd95574abf7de3f35607121, type: 3}
       propertyPath: m_Name
       value: EnemyType2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6124207182256244112, guid: 9ab8684a9dd95574abf7de3f35607121, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7972063440445184831, guid: 9ab8684a9dd95574abf7de3f35607121, type: 3}
       propertyPath: parentObject
@@ -236,6 +244,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyType2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6124207182256244112, guid: 9ab8684a9dd95574abf7de3f35607121, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7972063440445184831, guid: 9ab8684a9dd95574abf7de3f35607121, type: 3}
       propertyPath: parentObject
       value: 
@@ -302,6 +314,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyType2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6124207182256244112, guid: 9ab8684a9dd95574abf7de3f35607121, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7972063440445184831, guid: 9ab8684a9dd95574abf7de3f35607121, type: 3}
       propertyPath: parentObject
       value: 
@@ -324,6 +340,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3896712263598743255}
     m_Modifications:
+    - target: {fileID: -6355972026533749245, guid: 7a585a843a6c6994eb07f9c51bc7ff9b, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2820736037505080686, guid: 7a585a843a6c6994eb07f9c51bc7ff9b, type: 3}
       propertyPath: m_Name
       value: EnemyType1
@@ -391,6 +411,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3896712263598743255}
     m_Modifications:
+    - target: {fileID: -6355972026533749245, guid: 7a585a843a6c6994eb07f9c51bc7ff9b, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2820736037505080686, guid: 7a585a843a6c6994eb07f9c51bc7ff9b, type: 3}
       propertyPath: m_Name
       value: EnemyType1 (1)
@@ -502,6 +526,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyType2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6124207182256244112, guid: 9ab8684a9dd95574abf7de3f35607121, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7972063440445184831, guid: 9ab8684a9dd95574abf7de3f35607121, type: 3}
       propertyPath: parentObject
       value: 
@@ -567,6 +595,10 @@ PrefabInstance:
     - target: {fileID: 5288223886911284194, guid: 9ab8684a9dd95574abf7de3f35607121, type: 3}
       propertyPath: m_Name
       value: EnemyType2 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6124207182256244112, guid: 9ab8684a9dd95574abf7de3f35607121, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7972063440445184831, guid: 9ab8684a9dd95574abf7de3f35607121, type: 3}
       propertyPath: parentObject
