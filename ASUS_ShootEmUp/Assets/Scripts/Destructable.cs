@@ -30,8 +30,11 @@ public class Destructable : MonoBehaviour
         Bullets bullet = collision.GetComponent<Bullets>();
         if (bullet != null)
         {
-            Destroy(gameObject);
-            Destroy(bullet.gameObject);
+            if (!bullet.isEnemy)
+            {
+                Destroy(gameObject);
+                Destroy(bullet.gameObject);
+            }
         }
     }
 }
