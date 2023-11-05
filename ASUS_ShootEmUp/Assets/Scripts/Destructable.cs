@@ -50,6 +50,7 @@ public class Destructable : MonoBehaviour
                 if (boxCollider != null)
                 {
                     boxCollider.isTrigger = false;
+                    boxCollider.enabled = false;
                 }
 
                 if (explosion != null)
