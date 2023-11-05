@@ -26,6 +26,11 @@ public class Timer : MonoBehaviour
         currentTime = countDown ? currentTime -= Time.deltaTime : currentTime += Time.deltaTime;
         timerText.text = currentTime.ToString();
 
+        if(currentTime > 5)
+        {
+            Debug.Log("Win");
+        }
+
         SetTimerText();
     }
 

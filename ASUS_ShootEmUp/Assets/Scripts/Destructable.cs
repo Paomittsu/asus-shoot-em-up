@@ -64,34 +64,7 @@ public class Destructable : MonoBehaviour
                 {
                     Instantiate(explosionSmol, transform.position, Quaternion.identity);
                 }
-
-
                 objectDeath();
-                // if (explosion != null)
-                // {
-                //     if (currentHealth == 0)
-                //     {
-                //         MoveRightLeft movespeed = GetComponent<MoveRightLeft>();
-                //         if (movespeed != null)
-                //         {
-                //             movespeed.moveSpeeed = 0f;
-                //         }
-                //         GetComponent<SpriteRenderer>().enabled = false;
-
-                //         BoxCollider2D boxCollider = GetComponent<BoxCollider2D>();
-                //         if (boxCollider != null)
-                //         {
-                //             boxCollider.isTrigger = false;
-                //             boxCollider.enabled = false;
-                //         }
-                //         Instantiate(explosion, transform.position, Quaternion.identity);
-                //         boomSFX.Play();
-                //         Destroy(gameObject, 1f);
-                //         Destroy(bullet.gameObject);
-                //     }
-                // }
-                
-            
             }
         }
     }
