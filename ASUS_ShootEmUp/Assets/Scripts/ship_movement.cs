@@ -24,6 +24,8 @@ public class ship_movement : MonoBehaviour
     bool shoot1;
     bool shoot2;
 
+    [SerializeField] private AudioSource boomSFX;
+
     void Start()
     {
         death = FindObjectOfType<Death>();
@@ -130,6 +132,8 @@ public class ship_movement : MonoBehaviour
         Invoke("ResetVulnerability", invulnerabilityTime);
         if (currentHealth <= 0)
         {
+            Debug.Log("Why u no plei");
+            boomSFX.Play();
             if (explosion != null)
             {
                 Instantiate(explosion, transform.position, Quaternion.identity);
