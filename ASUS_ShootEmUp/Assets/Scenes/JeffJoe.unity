@@ -672,7 +672,7 @@ MonoBehaviour:
   moveSpeed: 5
   rb: {fileID: 864521869}
   health: {fileID: 375407783}
-  maxHealth: 1
+  maxHealth: 5
   currentHealth: 0
   animator: {fileID: 864521872}
   death: {fileID: 1323764185566658616}

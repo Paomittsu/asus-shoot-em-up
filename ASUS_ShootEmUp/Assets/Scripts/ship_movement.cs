@@ -131,14 +131,15 @@ public class ship_movement : MonoBehaviour
         animator.SetBool("damage", true);
         Invoke("ResetVulnerability", invulnerabilityTime);
         if (currentHealth <= 0)
-        {
-            Debug.Log("Why u no plei");
-            boomSFX.Play();
+        {            
             if (explosion != null)
             {
                 Instantiate(explosion, transform.position, Quaternion.identity);
+                boomSFX.Play();
             }
-            Destroy(gameObject);
+            gameObject.GetComponent<PolygonCollider2D>().enabled = false;
+            Destroy(GetComponent<Transform>().GetChild(0).gameObject);
+            Destroy(gameObject, 1f);
             death.GameOver();
         }
     }
