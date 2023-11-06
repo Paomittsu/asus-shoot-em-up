@@ -107,6 +107,13 @@ public class Destructable : MonoBehaviour
                 else
                 {
                     GetComponent<SpriteRenderer>().enabled = false;
+                    if (transform.childCount > 0)
+                    {
+                        foreach(Transform child in transform)
+                        {
+                            GameObject.Destroy(child.gameObject);
+                        }
+                    }
                 }
 
                 BoxCollider2D boxCollider = GetComponent<BoxCollider2D>();
