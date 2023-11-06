@@ -10,6 +10,8 @@ public class Death : MonoBehaviour
     public Animator deathFade;
     public Animator winFade;
     public float deathTime = 1f;
+
+    public Collider2D shipWin;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +36,7 @@ public class Death : MonoBehaviour
             deathscrn.SetActive(true);
         }
         StartCoroutine(PlayerLose());
+        
     }
 
     public void Winner()
@@ -47,7 +50,7 @@ public class Death : MonoBehaviour
             winscrn.SetActive(true);
         }
         
-        
+        shipWin.enabled = false;
         StartCoroutine(PlayerWin());
     }
 

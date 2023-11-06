@@ -1554,6 +1554,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1172708507}
     m_Modifications:
+    - target: {fileID: 984651734865742229, guid: f4d0e4c10a6d80d43906611f0b792a63, type: 3}
+      propertyPath: shipWin
+      value: 
+      objectReference: {fileID: 864521871}
+    - target: {fileID: 984651734865742229, guid: f4d0e4c10a6d80d43906611f0b792a63, type: 3}
+      propertyPath: playerWinner
+      value: 
+      objectReference: {fileID: 864521867}
     - target: {fileID: 3367632584240738554, guid: f4d0e4c10a6d80d43906611f0b792a63, type: 3}
       propertyPath: m_Name
       value: Canvas
